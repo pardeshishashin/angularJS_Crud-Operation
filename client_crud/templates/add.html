@@ -1,0 +1,27 @@
+<div class="container" ng-controller="userController as userVM" ng-init="userVM.getRecentUsers()">
+    <div class="panel-heading">
+        <p class="panel-title"><span style="color:#5bc0de;" class="glyphicon glyphicon-plus"> </span>  Add New User</p><hr>
+    </div>
+    <div class="panel-body">
+        <form ng-submit="addUser()">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" ng-model="user.name" required="">
+
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <input type="text" class="form-control" id="description" ng-model="user.description" required="">
+            </div>
+
+            <div class="form-group">
+                <label for="price">Date Visited:</label>
+                <input type="date" class="form-control" id="date" ng-model="user.date_visited" required="">
+            </div>
+
+            <button type="submit"  style="color:#5bc0de;" class="btn btn-default">Save</button>
+            <a ui-sref="home" class="btn btn-default"> Cancel</a>
+        </form>
+    </div>
+</div>
